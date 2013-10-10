@@ -1,0 +1,18 @@
+{
+    "name": "AnagramGame",
+    "version": "1.0.0",
+
+    "scripts": {
+        "install": "npm install -g jasmine-node"
+    },
+
+    "dependencies": {
+        "jake":  "*",
+        "jshint": "*",
+        "glob": "*",
+        "requirejs":  "*",
+        "jasmine-node": "*",
+        "express": "*"
+    }
+
+}

@@ -1,0 +1,172 @@
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+
+@import "typography";
+
+/*
+ * Common mixins
+ *-------------------------------*/
+@mixin structural {
+	display: block;
+	text-indent: -9999px;
+}
+
+@mixin content {
+    padding: 0 2%;
+    position: relative;
+}
+
+@mixin unstyled-link {
+    text-decoration: none;
+    &:hover, &:visite, &:active { text-decoration: none; }
+    color: inherit;
+}
+
+
+/*------------------------------
+ * Page Wide params
+ *------------------------------*/
+$padding: 2%;
+
+* {
+    @include box-sizing(border-box);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+input[type=text] {
+    padding: 0.4em;
+}
+
+#app {
+
+    display: none;
+    overflow: hidden;
+    position: relative;
+
+    & > header {
+        background-color: #111;
+        color: #eee;
+        @include content();
+
+        .masterword {
+            font-size: 0.7em;
+            font-style: italic;
+        }
+    }
+
+    .content {
+        overflow: hidden;
+    }
+}
+
+.error-message {
+    @include error-font();
+    display: block;
+}
+
+
+#initializer {
+    @include content();
+    @include clearfix();
+    background-color: #bbb;
+    display: none;
+
+    @include transition(height 0.3s ease);
+    @include transition(opacity 0.3s ease-out);
+
+    form {
+        margin-bottom: 2%;
+    }
+
+    footer {
+        @include content();
+        a {
+            @include border-radius(8px);
+            background-color: #999;
+
+            display: inline-block;
+            float: right;
+            color: #eee;
+            height: 18px;
+            width: 18px;
+            padding: 4px;
+            text-align: center;
+            @include text-shadow(1px 1px 1px rgba(0,0,0,.6));
+            margin: 0 0 0.3em 0;
+        }
+    }
+}
+
+.toggle {
+    display: inline-block;
+    margin-left: 2%;
+    z-index: 2;
+    margin-top: -5px;
+    background-color: #bbb;
+    color: #eee;
+    @include text-shadow(1px 1px 1px rgba(0,0,0,.6));
+    padding: 4px 0.5em;
+    @include border-radius(0 0 4px 4px);
+    @include box-shadow(1px 2px 2px rgba(0,0,0,.8));
+
+    a {
+        @include unstyled-link();
+    }
+}
+
+.game-area {
+    overflow: hidden;
+}
+
+#game {
+    @include content();
+    margin: $padding;
+    padding: 0 $padding $padding $padding;
+    border: 1px solid #888;
+    @include border-radius(6px);
+    float: left;
+
+    form {
+        input[type=text] {
+            margin: 0.4em 0;
+        }
+    }
+}
+
+#highscores {
+    @include content();
+    display: inline-block;
+    min-width: 300px;
+    background-color: #bbb;
+    margin: $padding;
+    border: 2px solid #eee;
+    padding: 0 $padding $padding;
+    @include border-radius(8px);
+    color: #fff;
+    @include text-shadow(1px 1px 1px rgba(0,0,0,.6));
+    float: left;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            //background-color: #EEE;
+            display: block;
+            margin: 2px 0;
+            padding: 4px;
+            border: 1px solid #888;
+            @include border-radius(6px);
+        }
+    }
+}

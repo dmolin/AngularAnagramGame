@@ -1,0 +1,42 @@
+$common-font: 'Tauri', Arial, sans-serif;
+$font-base-size: 16px;
+
+@mixin main-font {
+    font-family: $common-font;
+    font-size: $font-base-size;
+    font-weight: normal;
+}
+
+@mixin error-font {
+    color: red;
+    display: none;
+    font-style: italic;
+    font-size: 0.8em;
+
+    &:before {
+        background-color: red;
+        border-radius: 10px 10px 10px 10px;
+        color: yellow;
+        content: "x";
+        display: inline-block;
+        height: 10px;
+        line-height: 10px;
+        margin-right: 4px;
+        padding: 4px;
+        text-align: center;
+        width: 10px;
+    }
+
+
+}
+
+body {
+    @include main-font();
+	font-size: $font-base-size;
+}
+
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.2em; }
+
+h1,h2 { margin: 0; padding: 0.5em 0; font-weight: 400; }
+

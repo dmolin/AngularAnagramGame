@@ -1,0 +1,25 @@
+{
+	"strict":		false,
+
+	"devel":		true,
+	"node":			true,
+	"es5":			true,
+	"esnext":		true,
+	"jquery":		true,
+	"browser":		true,
+
+	"maxerr":		100,
+	"predef": [
+		"module",
+		"require",
+		"load",
+		"action",
+		"layout",
+		"send",
+		"header",
+		"DataView",
+		"tash",
+		"Gauges",
+		"grunt"
+	]
+}
