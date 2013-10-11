@@ -3,7 +3,7 @@
 A very basic and simple Web game implemented with AngularJS as a take home test
 
 (Click on the image to see a short video of the game in action).
-[![ScreenShot](https://raw.github.com/dmolin/AngularAnagramGame/master/assets/anagram-game.png)](https://vimeo.com/60903466)
+[![ScreenShot](https://raw.github.com/dmolin/AngularAnagramGame/master/assets/anagram-game-screenshot.png)](https://vimeo.com/60903466)
 
 ## Architecture ##
 
